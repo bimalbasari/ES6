@@ -13,27 +13,32 @@
     <h1 id="output"></h1>
 
     <script>
+        // parent class
+        // class{}  keyword  to create a class.
         class Car {
+            // constructor method
             constructor(brand) {
                 this.carname = brand;
             }
-            present() {
+            now() {
                 return 'I have a ' + this.carname;
             }
         }
-
+        //  child class
         class Model extends Car {
+            // constructor method
             constructor(brand, mod) {
+                //super() method refers to the parent class.
                 super(brand);
                 this.model = mod;
             }
-            show() {
-                return this.present() + ', it is a ' + this.model;
+            result() {
+                return this.now() + ', it is a ' + this.model;
             }
         }
-
+        // use class to create objects
         let myCar = new Model("Ford", "Mustang");
-        document.getElementById("output").innerHTML = myCar.show();
+        document.getElementById("output").innerHTML = myCar.result();
     </script>
 
 </body>
